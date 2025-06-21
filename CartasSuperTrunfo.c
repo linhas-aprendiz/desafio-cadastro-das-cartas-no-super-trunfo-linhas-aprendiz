@@ -64,7 +64,7 @@ int main() {
          // leitura de dados da carta 01
          printf("\n---Cadastro da carta 01--- \n");
          printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
-         printf("Estado (A-H): \n");  //a esolha do A ao H representa os 8 estados
+         printf("Estado (A-H): ");  //a esolha do A ao H representa os 8 estados
          
 
     
