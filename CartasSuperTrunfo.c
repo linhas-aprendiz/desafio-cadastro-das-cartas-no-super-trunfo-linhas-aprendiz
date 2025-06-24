@@ -52,7 +52,7 @@ int main() {
     char letra1;
     char codigo1[10];
     char cidade1[30]; 
-    int carta1; 
+    //int carta1; 
     int populacao1;
     int pib1;
     int pontos_turisticos1; 
@@ -63,9 +63,20 @@ int main() {
          
          // leitura de dados da carta 01
          printf("\n---Cadastro da carta 01--- \n");
+         printf("Digite o nome da cidade: \n");
+         fgets(cidade1, 30, stdin);
          printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
-         printf("Estado (A-H): ");  //a esolha do A ao H representa os 8 estados
+         printf("Estado (A-H): ");  //a esolha do A ao H representa os 8 estados 
+         scanf("%s", &letra1);
          
+         printf("Código da Carta escolhida: \n");
+         scanf("%s", &codigo1);
+
+         //printf("Digite o nome da cidade: \n");
+         //fgets(cidade1, 30, stdin);
+
+         printf("Tamanho populacional: \n");
+         scanf("%c", &populacao1);
 
     
      
