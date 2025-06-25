@@ -51,11 +51,10 @@ int main() {
     //variaveis para a carta 01
     char letra1;
     char codigo1[10];
-    char cidade1[30]; 
-    //int carta1; 
+    char cidade1[30];  
     int populacao1;
-    int pib1;
-    int pontos_turisticos1; 
+    int ponto_turistico1; 
+    float pib1;
     float area1;
 
          //Início do jogo
@@ -65,18 +64,35 @@ int main() {
          printf("\n---Cadastro da carta 01--- \n");
          printf("Digite o nome da cidade: \n");
          fgets(cidade1, 30, stdin);
-         printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
-         printf("Estado (A-H): ");  //a esolha do A ao H representa os 8 estados 
-         scanf("%s", &letra1);
          
-         printf("Código da Carta escolhida: \n");
+         //estado, ex: Rio de Janeiro
+         printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
+         printf("Estado (A-H): ");  //a escolha do A ao H representa os 8 estados 
+         scanf("%s", &letra1);
+         //printf("\nEscolha o estado\n");
+         
+         //código da carta, ex: B02
+         printf("A letra do estado seguida de um número de 01 a 04: \n");
          scanf("%s", &codigo1);
+         printf("esse será o código da sua carta\n");
 
-         //printf("Digite o nome da cidade: \n");
-         //fgets(cidade1, 30, stdin);
-
-         printf("Tamanho populacional: \n");
+         //população, ex: 40000
+         printf("\nTamanho populacional: \n");
          scanf("%c", &populacao1);
+
+         //Pib, ex: 20000000
+         printf("Qual o tamanho do PIB per capta: \n");
+         scanf("%.1f", &pib1);
+
+         //pontos turísticos da cidade escolhida
+         printf("Quantos pontos turísticos tem nessa cidade?: \n");
+         scanf("%c", &ponto_turistico1);
+
+         //Aréa da sua cidade, ex: 15000
+         printf("qual o tamanho da cidade escolhida: \n");
+         scanf("%.2f", &area1);
+
+
 
     
      
