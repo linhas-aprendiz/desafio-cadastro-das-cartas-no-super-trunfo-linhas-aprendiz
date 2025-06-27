@@ -67,9 +67,11 @@ int main() {
          
          //estado, ex: Rio de Janeiro
          printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
+         printf("\nEscolha um estado do A ao H\n");
+         
          printf("Estado (A-H): ");  //a escolha do A ao H representa os 8 estados 
-         scanf("%s", &letra1);
-         //printf("\nEscolha o estado\n");
+         scanf("%c", &letra1);
+         //printf("\nEscolha um estado do A ao H\n");
          
          //código da carta, ex: B02
          printf("A letra do estado seguida de um número de 01 a 04: \n");
@@ -78,19 +80,19 @@ int main() {
 
          //população, ex: 40000
          printf("\nTamanho populacional: \n");
-         scanf("%c", &populacao1);
+         scanf("%d", &populacao1);
 
          //Pib, ex: 20000000
          printf("Qual o tamanho do PIB per capta: \n");
-         scanf("%.1f", &pib1);
+         scanf("%f", &pib1);
 
          //pontos turísticos da cidade escolhida
          printf("Quantos pontos turísticos tem nessa cidade?: \n");
-         scanf("%c", &ponto_turistico1);
+         scanf("%d", &ponto_turistico1);
 
          //Aréa da sua cidade, ex: 15000
          printf("qual o tamanho da cidade escolhida: \n");
-         scanf("%.2f", &area1);
+         scanf("%f", &area1);
 
 
 
