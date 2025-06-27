@@ -60,38 +60,39 @@ int main() {
          //Início do jogo
          printf("\nseja bem vindo ao jogo de Cartas Super trunfo\n");
          
-         // leitura de dados da carta 01
+         // Leitura de dados da carta 01
          printf("\n---Cadastro da carta 01--- \n");
-         printf("Digite o nome da cidade: \n");
+         
+         //Nome da sua cidade
+         printf("Digite o nome da cidade: \n");   //ex: Natal
          fgets(cidade1, 30, stdin);
          
-         //estado, ex: Rio de Janeiro
+         //Um estado 
          printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
-         printf("\nEscolha um estado do A ao H\n");
+         printf("\nEscolha um estado do A ao H\n");   //ex: Rio de Janeiro(RJ)
          
          printf("Estado (A-H): ");  //a escolha do A ao H representa os 8 estados 
          scanf("%c", &letra1);
-         //printf("\nEscolha um estado do A ao H\n");
          
-         //código da carta, ex: B02
-         printf("A letra do estado seguida de um número de 01 a 04: \n");
+         //Código da carta
+         printf("A letra do estado seguida de um número de 01 a 04: \n");  //ex: B01
          scanf("%s", &codigo1);
-         printf("esse será o código da sua carta\n");
+         //printf("esse será o código da sua carta\n");
 
-         //população, ex: 40000
-         printf("\nTamanho populacional: \n");
+         //A população da sua cidade
+         printf("\nTamanho populacional: \n");   //ex: 40000
          scanf("%d", &populacao1);
 
-         //Pib, ex: 20000000
-         printf("Qual o tamanho do PIB per capta: \n");
+         //Pib per capta
+         printf("Qual o valor do PIB: \n");   //ex: 20000000
          scanf("%f", &pib1);
 
-         //pontos turísticos da cidade escolhida
-         printf("Quantos pontos turísticos tem nessa cidade?: \n");
+         //Pontos turísticos da cidade escolhida
+         printf("Quantos pontos turísticos tem nessa cidade?: \n");   //ex: 10
          scanf("%d", &ponto_turistico1);
 
-         //Aréa da sua cidade, ex: 15000
-         printf("qual o tamanho da cidade escolhida: \n");
+         //Aréa da sua cidade
+         printf("qual o tamanho da cidade escolhida: \n");   //ex: 15000
          scanf("%f", &area1);
 
 
