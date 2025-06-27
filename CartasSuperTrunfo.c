@@ -57,6 +57,16 @@ int main() {
     float pib1;
     float area1;
 
+
+    //variaveis para a carta 02
+    char letra2;
+    char codigo2[10];
+    char cidade2[30];  
+    int populacao2;
+    int ponto_turistico2; 
+    float pib2;
+    float area2;
+
          //Início do jogo
          printf("\nseja bem vindo ao jogo de Cartas Super trunfo\n");
          
@@ -97,8 +107,40 @@ int main() {
 
 
 
-    
-     
+         // Leitura de dados da carta 02
+         printf("\n---Cadastro da carta 02--- \n");
          
+         //Nome da sua cidade
+         printf("Digite o nome da cidade: \n");   //ex: João Pessoa
+         fgets(cidade2, 30, stdin);
+         
+         //Um estado 
+         printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
+         printf("\nEscolha um estado do A ao H\n");   //ex: São Paulo(SP)
+         
+         printf("Estado (A-H): ");  //a escolha do A ao H representa os 8 estados 
+         scanf("%c", &letra2);
+         
+         //Código da carta
+         printf("A letra do estado seguida de um número de 01 a 04: \n");  //ex: A02
+         scanf("%s", &codigo2);
+
+         //A população da sua cidade
+         printf("\nTamanho populacional: \n");   //ex: 60000
+         scanf("%d", &populacao2);
+
+         //Pib per capta
+         printf("Qual o valor do PIB: \n");   //ex: 4000000
+         scanf("%f", &pib2);
+
+         //Pontos turísticos da cidade escolhida
+         printf("Quantos pontos turísticos tem nessa cidade?: \n");   //ex: 22
+         scanf("%d", &ponto_turistico2);
+
+         //Aréa da sua cidade
+         printf("qual o tamanho da cidade escolhida: \n");   //ex: 2000
+         scanf("%f", &area2);
+
+
      return 0;
 }
