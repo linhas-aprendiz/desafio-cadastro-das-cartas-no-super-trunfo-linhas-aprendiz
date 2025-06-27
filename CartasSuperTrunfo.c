@@ -142,5 +142,10 @@ int main() {
          scanf("%f", &area2);
 
 
+         //Saída de dados da carta 01
+
+         //Saída de dados da carta 02
+
+         
      return 0;
 }
