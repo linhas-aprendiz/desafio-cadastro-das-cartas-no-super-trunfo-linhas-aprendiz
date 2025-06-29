@@ -87,10 +87,9 @@ int main() {
          //Código da carta
          printf("A letra do estado seguida de um número de 01 a 04: \n");  //ex: B01
          scanf("%s", &codigo1);
-         //printf("esse será o código da sua carta\n");
 
          //A população da sua cidade
-         printf("\nTamanho populacional: \n");   //ex: 40000
+         printf("Quantidade populacional: \n");   //ex: 40000
          scanf("%d", &populacao1);
 
          //Pib per capta
@@ -126,7 +125,7 @@ int main() {
          scanf("%s", &codigo2);
 
          //A população da sua cidade
-         printf("\nTamanho populacional: \n");   //ex: 60000
+         printf("Quantidade populacional: \n");   //ex: 60000
          scanf("%d", &populacao2);
 
          //Pib per capta
@@ -143,8 +142,26 @@ int main() {
 
 
          //Saída de dados da carta 01
+         printf("\nDados da Carta 01\n");
+         printf("Estado: %c \n", letra1);
+         printf("esse será o código da sua carta: %s \n", codigo1);
+         printf("Cidade: %s\n", cidade1);
+         printf("População: %d \n", populacao1);
+         printf("Pontos turísticos: %d \n", ponto_turistico1);
+         printf("PIB per capta: %.1f \n", pib1);
+         printf("Tamanho da cidade: %.2f \n", area1);
+
+
 
          //Saída de dados da carta 02
+         printf("\nDados da Carta 02\n");
+         printf("Estado: %c \n", letra2);
+         printf("esse será o código da sua carta: %s \n", codigo2);
+         printf("Cidade: %s \n", cidade2);
+         printf("População: %d \n", populacao2);
+         printf("Pontos turísticos: %d \n", ponto_turistico2);
+         printf("PIB per capta: %.1f \n", pib2);
+         printf("Tamanho da cidade: %.2f \n", area2);
 
          
      return 0;
