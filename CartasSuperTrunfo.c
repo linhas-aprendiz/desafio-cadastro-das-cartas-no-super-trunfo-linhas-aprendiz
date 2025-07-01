@@ -86,7 +86,7 @@ int main() {
          
          //Código da carta
          printf("A letra do estado seguida de um número de 01 a 04: \n");  //ex: B01
-         scanf("%s", &codigo1);
+         scanf(" %s", codigo1);
 
          //A população da sua cidade
          printf("Quantidade populacional: \n");   //ex: 40000
@@ -111,18 +111,19 @@ int main() {
          
          //Nome da sua cidade
          printf("Digite o nome da cidade: \n");   //ex: João Pessoa
-         fgets(cidade2, 30, stdin);
+         scanf(" %[^\n]", cidade2);  // Corrigido para ler nome com espaços
+         //fgets(cidade2, 30, stdin);
          
          //Um estado 
          printf("A - RN\nB - CE\nC - PE\nD - SP\nE - RJ\nF - MG\nG - RS\nH - PR\n");
          printf("\nEscolha um estado do A ao H\n");   //ex: São Paulo(SP)
          
          printf("Estado (A-H): ");  //a escolha do A ao H representa os 8 estados 
-         scanf("%c", &letra2);
+         scanf(" %c", &letra2);
          
          //Código da carta
          printf("A letra do estado seguida de um número de 01 a 04: \n");  //ex: A02
-         scanf("%s", &codigo2);
+         scanf("%s", codigo2);
 
          //A população da sua cidade
          printf("Quantidade populacional: \n");   //ex: 60000
@@ -145,11 +146,11 @@ int main() {
          printf("\nDados da Carta 01\n");
          printf("Estado: %c \n", letra1);
          printf("esse será o código da sua carta: %s \n", codigo1);
-         printf("Cidade: %s\n", cidade1);
+         printf("Cidade: %s", cidade1);
          printf("População: %d \n", populacao1);
          printf("Pontos turísticos: %d \n", ponto_turistico1);
-         printf("PIB per capta: %.1f \n", pib1);
-         printf("Tamanho da cidade: %.2f \n", area1);
+         printf("PIB per capta: %.1f\n ", pib1);
+         printf("Tamanho da cidade: %.2f por Km^2 \n", area1);
 
 
 
@@ -161,7 +162,7 @@ int main() {
          printf("População: %d \n", populacao2);
          printf("Pontos turísticos: %d \n", ponto_turistico2);
          printf("PIB per capta: %.1f \n", pib2);
-         printf("Tamanho da cidade: %.2f \n", area2);
+         printf("Tamanho da cidade: %.2f por Km^2 \n", area2);
 
          
      return 0;
