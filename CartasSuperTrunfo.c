@@ -54,7 +54,7 @@ int main() {
     char cidade1[30];  
     int populacao1;
     int ponto_turistico1; 
-    float pib1;
+    double pib1;
     float area1;
 
 
@@ -64,7 +64,7 @@ int main() {
     char cidade2[30];  
     int populacao2;
     int ponto_turistico2; 
-    float pib2;
+    double pib2;
     float area2;
 
          //Início do jogo
@@ -92,9 +92,9 @@ int main() {
          printf("Quantidade populacional: \n");   //ex: 40000
          scanf("%d", &populacao1);
 
-         //Pib per capta
+         //Pib total
          printf("Qual o valor do PIB: \n");   //ex: 20000000
-         scanf("%f", &pib1);
+         scanf("%lf", &pib1);
 
          //Pontos turísticos da cidade escolhida
          printf("Quantos pontos turísticos tem nessa cidade?: \n");   //ex: 10
@@ -129,9 +129,9 @@ int main() {
          printf("Quantidade populacional: \n");   //ex: 60000
          scanf("%d", &populacao2);
 
-         //Pib per capta
+         //Pib total
          printf("Qual o valor do PIB: \n");   //ex: 4000000
-         scanf("%f", &pib2);
+         scanf("%lf", &pib2);
 
          //Pontos turísticos da cidade escolhida
          printf("Quantos pontos turísticos tem nessa cidade?: \n");   //ex: 22
@@ -148,8 +148,9 @@ int main() {
          printf("esse será o código da sua carta: %s \n", codigo1);
          printf("Cidade: %s", cidade1);
          printf("População: %d \n", populacao1);
+         printf("PIB: R$ %f \n", pib1);
+         //printf("PIB: R$ %.2f \n", pib1 / 1000000000);
          printf("Pontos turísticos: %d \n", ponto_turistico1);
-         printf("PIB per capta: %.1f\n ", pib1);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area1);
 
 
@@ -159,9 +160,10 @@ int main() {
          printf("Estado: %c \n", letra2);
          printf("esse será o código da sua carta: %s \n", codigo2);
          printf("Cidade: %s \n", cidade2);
+         printf("PIB: R$ %f \n", pib2);
          printf("População: %d \n", populacao2);
+        //printf("PIB: R$ %.2f \n", pib2 / 1000000000);
          printf("Pontos turísticos: %d \n", ponto_turistico2);
-         printf("PIB per capta: %.1f \n", pib2);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area2);
 
          
