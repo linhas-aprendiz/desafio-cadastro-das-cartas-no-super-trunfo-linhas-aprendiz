@@ -53,7 +53,7 @@ int main() {
     char codigo1[10];
     char cidade1[30];  
     int populacao1;
-    int ponto_turistico1; 
+    int tur1; 
     double pib1;
     float area1;
 
@@ -63,7 +63,7 @@ int main() {
     char codigo2[10];
     char cidade2[30];  
     int populacao2;
-    int ponto_turistico2; 
+    int tur2; 
     double pib2;
     float area2;
 
@@ -98,7 +98,7 @@ int main() {
 
          //Pontos turísticos da cidade escolhida
          printf("Quantos pontos turísticos tem nessa cidade?: \n");   //ex: 10
-         scanf("%d", &ponto_turistico1);
+         scanf("%d", &tur1);
 
          //Aréa da sua cidade
          printf("qual o tamanho da cidade escolhida: \n");   //ex: 15000
@@ -135,7 +135,7 @@ int main() {
 
          //Pontos turísticos da cidade escolhida
          printf("Quantos pontos turísticos tem nessa cidade?: \n");   //ex: 22
-         scanf("%d", &ponto_turistico2);
+         scanf("%d", &tur2);
 
          //Aréa da sua cidade
          printf("qual o tamanho da cidade escolhida: \n");   //ex: 2000
@@ -149,8 +149,7 @@ int main() {
          printf("Cidade: %s", cidade1);
          printf("População: %d \n", populacao1);
          printf("PIB: R$ %f \n", pib1);
-         //printf("PIB: R$ %.2f \n", pib1 / 1000000000);
-         printf("Pontos turísticos: %d \n", ponto_turistico1);
+         printf("Pontos turísticos: %d \n", tur1);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area1);
 
 
@@ -162,8 +161,7 @@ int main() {
          printf("Cidade: %s \n", cidade2);
          printf("PIB: R$ %f \n", pib2);
          printf("População: %d \n", populacao2);
-        //printf("PIB: R$ %.2f \n", pib2 / 1000000000);
-         printf("Pontos turísticos: %d \n", ponto_turistico2);
+         printf("Pontos turísticos: %d \n", tur2);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area2);
 
          
