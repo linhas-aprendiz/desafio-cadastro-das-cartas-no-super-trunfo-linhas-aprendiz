@@ -133,7 +133,7 @@ int main() {
          printf("esse será o código da sua carta: %s \n", codigo1);
          printf("Cidade: %s", cidade1);
          printf("População: %d \n", pop1);
-         printf("PIB: R$ %f \n", pib1);
+         printf("PIB: R$ %0.f \n", pib1);
          printf("Pontos turísticos: %d \n", tur1);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area1);
          printf("Densidade populacional: %.1f \n", densid1);
@@ -145,8 +145,8 @@ int main() {
          printf("Estado: %c \n", letra2);
          printf("esse será o código da sua carta: %s \n", codigo2);
          printf("Cidade: %s \n", cidade2);
-         printf("PIB: R$ %f \n", pib2);
          printf("População: %d \n", pop2);
+         printf("PIB: R$ %0.f \n", pib2);
          printf("Pontos turísticos: %d \n", tur2);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area2);
          printf("Densidade populacional: %.1f \n", densid2);
