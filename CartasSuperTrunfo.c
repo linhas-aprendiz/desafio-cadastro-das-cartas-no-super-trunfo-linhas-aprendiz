@@ -2,17 +2,41 @@
 
 /*
 O que você vai fazer
-Aprimore o programa em C que você criou no nível básico. 
-O programa continuará lendo as mesmas informações do usuário (estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos) para duas cartas. 
-A diferença é que, agora, seu programa também deve:
-Calcular a Densidade Populacional: Divida a população da cidade pela sua área. 
-O resultado será a densidade populacional, que representa o número de habitantes por quilômetro quadrado. 
-Armazene esse valor em uma variável do tipo float.
-Calcular o PIB per Capita: Divida o PIB da cidade pela sua população. 
-O resultado será o PIB per capita, que indica a riqueza média por pessoa na cidade. 
-Armazene esse valor em uma variável do tipo float.
-Exibir os Resultados: Além de exibir as informações lidas do usuário (como no nível básico), seu programa também deve exibir a densidade populacional e o PIB per capita calculados para cada cidade. 
-Formate os valores de ponto flutuante com duas casas decimais.
+Seu programa em C deve agora permitir ao usuário inserir os dados de duas cartas, 
+assim como nos níveis anteriores, mas com uma mudança importante: a população agora deve ser 
+armazenada como unsigned long int para acomodar números maiores. As demais informações permanecem com os mesmos tipos. 
+Após a leitura dos dados, seu programa deverá:
+Calcular a Densidade Populacional e o PIB per Capita: Assim como no nível intermediário, calcule e armazene esses valores.
+ 
+Calcular o Super Poder: Para cada carta, calcule o "Super Poder" somando todos os atributos numéricos 
+(população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional – quanto menor a densidade, maior o "poder"). 
+Armazene o Super Poder como float. Atenção: Preste muita atenção na conversão de tipos ao somar valores de tipos diferentes!
+ 
+Comparar as Cartas: Compare as duas cartas atributo por atributo (exceto estado, código e nome), incluindo o Super Poder. 
+Lembre-se: para a densidade populacional, a carta com o menor valor vence; para os demais atributos (incluindo Super Poder), a carta com o maior valor vence.
+ 
+Exibir os Resultados das Comparações: Para cada atributo, imprima na tela qual carta venceu (Carta 1 ou Carta 2), 
+exibindo o resultado da comparação (1 para verdadeiro – Carta 1 vence – e 0 para falso – Carta 2 vence).
+ 
+Exemplo de Saída (após a entrada dos dados):
+
+ 
+
+Comparação de Cartas:
+
+População: Carta 1 venceu (1)
+
+Área: Carta 1 venceu (1)
+
+PIB: Carta 1 venceu (1)
+
+Pontos Turísticos: Carta 1 venceu (1)
+
+Densidade Populacional: Carta 2 venceu (0)
+
+PIB per Capita: Carta 1 venceu (1)
+
+Super Poder: Carta 1 venceu (1)
 */
 
 int main() {
@@ -21,24 +45,26 @@ int main() {
     char letra1;
     char codigo1[10];
     char cidade1[30];  
-    int pop1;   //população
+    unsigned long int pop1;   //população
     int tur1; 
     double pib1;
     float area1;
     float densid1;  //densidade populacional
     float capita1;  //PIB per capita
+    int superpoder; //soma de todos atributos (população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional)
 
 
     //variaveis para a carta 02
     char letra2;
     char codigo2[10];
     char cidade2[30];  
-    int pop2;   //população
+    unsigned long int pop2;   //população
     int tur2; 
     double pib2;
     float area2;
     float densid2;  //densidade populacional
     float capita2;  //PIB per capita
+    float superpoder2; //soma de todos atributos (população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional)
 
 
          //Início do jogo
@@ -64,7 +90,7 @@ int main() {
 
          //Densidade Populacional: etapa de levantamento de números
          printf("Qual o tamanho populacional da sua cidade: \n");   //ex: 40000
-         scanf("%d", &pop1);
+         scanf("%lu", &pop1);
 
          //Pib total
          printf("Qual o valor do PIB: \n");   //ex: 20000000
@@ -83,6 +109,9 @@ int main() {
 
          //PIB per capita
          capita1 = (float) pib1 / pop1;
+
+         //super poder, consiste na soma de todos os atributos da carta
+         superpoder2 = (float) pop1 + area1 + pib1 + tur1 + capita1 + 1 / densid1;
 
 
          // Leitura de dados da carta 02
@@ -106,7 +135,7 @@ int main() {
 
          //A população da sua cidade
          printf("Qual o tamanho populacional da sua cidade: \n");   //ex: 60000
-         scanf("%d", &pop2);
+         scanf("%lu", &pop2);
 
          //Pib total
          printf("Qual o valor do PIB: \n");   //ex: 4000000
@@ -126,18 +155,22 @@ int main() {
          //PIB per capita
          capita2 = (float) pib2 / pop2;
 
+         //super poder, consiste na soma de todos os atributos da carta
+         superpoder2 = (float) pop2 + area2 + pib2 + tur2 + capita2 + 1 / densid2;
+
 
          //Saída de dados da carta 01
          printf("\nDados da Carta 01\n");
          printf("Estado: %c \n", letra1);
          printf("esse será o código da sua carta: %s \n", codigo1);
          printf("Cidade: %s", cidade1);
-         printf("População: %d \n", pop1);
+         printf("População: %lu \n", pop1);
          printf("PIB: R$ %0.f \n", pib1);
          printf("Pontos turísticos: %d \n", tur1);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area1);
          printf("Densidade populacional: %.1f \n", densid1);
          printf("PIB per capita: R$ %.2f \n", capita1);
+         printf("Superpoder da carta 01: %.2f -- note-se de que quanto menor o valor, mais poder tem");
 
 
          //Saída de dados da carta 02
@@ -145,12 +178,13 @@ int main() {
          printf("Estado: %c \n", letra2);
          printf("esse será o código da sua carta: %s \n", codigo2);
          printf("Cidade: %s \n", cidade2);
-         printf("População: %d \n", pop2);
+         printf("População: %lu \n", pop2);
          printf("PIB: R$ %0.f \n", pib2);
          printf("Pontos turísticos: %d \n", tur2);
          printf("Tamanho da cidade: %.2f por Km^2 \n", area2);
          printf("Densidade populacional: %.1f \n", densid2);
          printf("PIB per capita: R$ %.2f \n", capita2);
+         printf("Superpoder da carta 02: %.2f -- note-se de que quanto menor o valor, mais poder tem");
 
 
      return 0;
