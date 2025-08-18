@@ -188,11 +188,11 @@ int main() {
          printf("Superpoder da carta 02: %.2f -- note-se de que quanto menor o valor, mais poder tem");
 
          //Comparação das cartas
-          int comparacao;
-          int carta;
+          int comparacao, comparacao2, comparacao3, comparacao4, comparacao5, comparacao6, comparacao7;
+          int carta, carta2, carta3, carta4, carta5, carta6, carta7;
 
          printf("População: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) pop1 > pop2), (carta = comparacao + 1));
-         printf("Área: Carta 1 venceu (%d) \n", carta, comparacao, (comparacao = (int) area1 > area2), (carta = comparacao + 1));
+         printf("Área: Carta %d venceu (%d) \n", carta2, comparacao2, (comparacao2 = (int) area1 > area2), (carta2 = comparacao2 + 1));
          printf("PIB: Carta 1 venceu (%d) \n", );
          printf("Pontos Turísticos: Carta 1 venceu (%d) \n", );
          printf("Densidade Populacional: Carta 2 venceu (%d) \n", );
