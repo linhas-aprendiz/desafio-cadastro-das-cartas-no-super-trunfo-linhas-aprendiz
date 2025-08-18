@@ -52,7 +52,7 @@ int main() {
     float densid1;  //densidade populacional
     float capita1;  //PIB per capita
     int superpoder; //soma de todos atributos (população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional)
-
+   
 
     //variaveis para a carta 02
     char letra2;
@@ -65,6 +65,7 @@ int main() {
     float densid2;  //densidade populacional
     float capita2;  //PIB per capita
     float superpoder2; //soma de todos atributos (população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional)
+   
 
 
          //Início do jogo
@@ -111,7 +112,7 @@ int main() {
          capita1 = (float) pib1 / pop1;
 
          //super poder, consiste na soma de todos os atributos da carta
-         superpoder2 = (float) pop1 + area1 + pib1 + tur1 + capita1 + 1 / densid1;
+         superpoder = (float) pop1 + area1 + pib1 + tur1 + capita1 + 1 / densid1;
 
 
          // Leitura de dados da carta 02
@@ -185,6 +186,18 @@ int main() {
          printf("Densidade populacional: %.1f \n", densid2);
          printf("PIB per capita: R$ %.2f \n", capita2);
          printf("Superpoder da carta 02: %.2f -- note-se de que quanto menor o valor, mais poder tem");
+
+         //Comparação das cartas
+          int comparacao;
+          int carta;
+
+         printf("População: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) pop1 > pop2), (carta = comparacao + 1));
+         printf("Área: Carta 1 venceu (%d) \n", carta, comparacao, (comparacao = (int) area1 > area2), (carta = comparacao + 1));
+         printf("PIB: Carta 1 venceu (%d) \n", );
+         printf("Pontos Turísticos: Carta 1 venceu (%d) \n", );
+         printf("Densidade Populacional: Carta 2 venceu (%d) \n", );
+         printf("PIB per Capita: Carta 1 venceu (%d) \n", );
+         printf("Super Poder: Carta 1 venceu (%d) \n", );
 
 
      return 0;
