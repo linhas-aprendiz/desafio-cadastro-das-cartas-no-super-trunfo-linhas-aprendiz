@@ -194,12 +194,12 @@ int main() {
           int comparacao;
           int carta;
 
-         printf("População: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) pop1 > pop2), (carta = comparacao + 1));
-         printf("Área: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) area1 > area2), (carta = comparacao + 1));
-         printf("PIB: Carta 1 venceu (%d) \n", carta, comparacao, (comparacao = (int) pib1 > pib2), (carta = comparacao + 1));
-         printf("Pontos Turísticos: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) tur1 > tur2), (carta = comparacao + 1));
-         printf("Densidade Populacional: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) densid1 > densid2), (carta = comparacao + 1));
-         printf("PIB per Capita: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) capita1 > capita2), (carta = comparacao + 1));
+         printf("População: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) pop1 > pop2), (carta = !comparacao + 1));
+         printf("Área: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) area1 > area2), (carta = !comparacao + 1));
+         printf("PIB: Carta 1 venceu (%d) \n", carta, comparacao, (comparacao = (int) pib1 > pib2), (carta = !comparacao + 1));
+         printf("Pontos Turísticos: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) tur1 > tur2), (carta = !comparacao + 1));
+         printf("Densidade Populacional: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) densid1 > densid2), (carta = !comparacao + 1));
+         printf("PIB per Capita: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) capita1 > capita2), (carta = !comparacao + 1));
          printf("Super Poder: Carta %d venceu (%d) \n", carta, comparacao, (comparacao = (int) superpoder > superpoder2), (carta = comparacao + 1));
 
 
