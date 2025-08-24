@@ -194,25 +194,39 @@ int main() {
           int comparacao;
           int carta;
 
-         //População Maior vence
+         //População - Maior vence
+         comparacao = (int) pop1 > pop2;
+         carta = !comparacao + 1;
          printf("População: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) pop1 > pop2), (carta = !comparacao + 1));
 
          //Área - Maior vence
+         comparacao = (int) area1 > area2;
+         carta = !comparacao + 1;
          printf("Área: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) area1 > area2), (carta = !comparacao + 1));
 
          //PIB - Maior vence
+         comparacao = (int) pib1 > pib2;
+         carta = !comparacao + 1;
          printf("PIB: Carta 1 venceu (%d) \n", carta, comparacao); //, (comparacao = (int) pib1 > pib2), (carta = !comparacao + 1));
 
          //Pontos Turístico - Maior vence
+         comparacao = (int) tur1 > tur2; 
+         carta = !comparacao + 1;
          printf("Pontos Turísticos: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) tur1 > tur2), (carta = !comparacao + 1));
 
          //Densidade Populacional - Menor vence 
+         comparacao = (int) densid1 < densid2;
+         carta = !comparacao + 1;
          printf("Densidade Populacional: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) densid1 < densid2), (carta = !comparacao + 1));
 
          //PIB per Capita - Maior vence
+         comparacao = (int) capita1 > capita2;
+         carta = !comparacao + 1;
          printf("PIB per Capita: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) capita1 > capita2), (carta = !comparacao + 1));
 
          //Super Poder - Maior vence
+         comparacao = (int) superpoder > superpoder2;
+         carta = !comparacao + 1;
          printf("Super Poder: Carta %d venceu (%d) \n", carta, comparacao); //, (comparacao = (int) superpoder > superpoder2), (carta = !comparacao + 1));
 
 
